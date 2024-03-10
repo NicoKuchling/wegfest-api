@@ -1,8 +1,9 @@
 package com.nicokuchling.wegfest.api.core.survey;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Set;
 
 public interface SurveyService {
@@ -13,7 +14,8 @@ public interface SurveyService {
     Set<MultipleChoiceQuestion> getAllMultipleChoiceQuestions();
 
     @GetMapping(
-            value = "/survey/response/person/{personId}",
+            value = "/survey/response",
             produces = "application/json")
-    SurveyResponse getSurveyResponseByPersonId(@PathVariable int personId);
+    Set<SurveyResponse> getSurveyResponsesByIds(
+            @RequestParam(value="surveyResponseId") List<Integer> surveyResponseIds);
 }

@@ -11,10 +11,11 @@ public interface SceneService {
     @GetMapping(
             value = "/scene",
             produces = "application/json")
-    Set<Scene> getAllScenes();
+    Set<SceneAggregate> getAllSceneAggregates();
 
     @GetMapping(
             value = "/scene/interaction/record",
             produces = "application/json")
-    List<SceneInteractionRecord> getSceneInteractionRecordsByIds(@RequestParam List<Integer> sceneInteractionRecordId);
+    List<SceneInteractionRecordAggregate> getSceneInteractionRecordAggregatesByIds(
+            @RequestParam(value="sceneInteractionRecordId") List<Integer> sceneInteractionRecordIds);
 }
