@@ -1,6 +1,8 @@
-package com.nicokuchling.wegfest.api.core.scene;
+package com.nicokuchling.wegfest.api.core.scene.aggregates;
 
 
+import com.nicokuchling.wegfest.api.core.scene.SceneInteractionRecord;
+import com.nicokuchling.wegfest.api.core.scene.services.ServiceAddresses;
 import com.nicokuchling.wegfest.api.core.survey.SurveyResponse;
 
 public final class SceneInteractionRecordAggregate {

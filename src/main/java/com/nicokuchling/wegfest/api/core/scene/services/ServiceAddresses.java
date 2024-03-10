@@ -1,4 +1,4 @@
-package com.nicokuchling.wegfest.api.core.scene;
+package com.nicokuchling.wegfest.api.core.scene.services;
 
 public class ServiceAddresses {
     private final String scene;

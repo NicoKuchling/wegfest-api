@@ -159,7 +159,7 @@ public class SceneInteractionRecord {
         this.trafficVolume = trafficVolume;
     }
 
-    public boolean isHasCyclists() {
+    public boolean hasCyclists() {
         return hasCyclists;
     }
 
@@ -167,7 +167,7 @@ public class SceneInteractionRecord {
         this.hasCyclists = hasCyclists;
     }
 
-    public boolean isHasTrafficLights() {
+    public boolean hasTrafficLights() {
         return hasTrafficLights;
     }
 

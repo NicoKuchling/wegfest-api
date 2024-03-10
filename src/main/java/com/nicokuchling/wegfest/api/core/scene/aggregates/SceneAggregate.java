@@ -1,5 +1,7 @@
-package com.nicokuchling.wegfest.api.core.scene;
+package com.nicokuchling.wegfest.api.core.scene.aggregates;
 
+import com.nicokuchling.wegfest.api.core.scene.Scene;
+import com.nicokuchling.wegfest.api.core.scene.services.ServiceAddresses;
 import com.nicokuchling.wegfest.api.core.survey.MultipleChoiceQuestion;
 
 import java.util.ArrayList;

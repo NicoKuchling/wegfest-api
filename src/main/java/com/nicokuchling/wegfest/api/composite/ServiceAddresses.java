@@ -1,7 +1,8 @@
-package com.nicokuchling.wegfest.api.composite.iteration;
+package com.nicokuchling.wegfest.api.composite;
 
 public class ServiceAddresses {
     private final String compositeIteration;
+    private final String compositeScene;
     private final String iteration;
     private final String person;
     private final String scene;
@@ -9,6 +10,7 @@ public class ServiceAddresses {
 
     public ServiceAddresses() {
         this.compositeIteration = null;
+        this.compositeScene = null;
         this.iteration = null;
         this.person = null;
         this.scene = null;
@@ -17,12 +19,14 @@ public class ServiceAddresses {
 
     public ServiceAddresses(
             String compositeIterationAddress,
+            String compositeSceneAddress,
             String iterationAddress,
             String personAddress,
             String sceneAddress,
             String surveyAddress) {
 
         this.compositeIteration = compositeIterationAddress;
+        this.compositeScene = compositeSceneAddress;
         this.iteration = iterationAddress;
         this.person = personAddress;
         this.scene = sceneAddress;
@@ -31,6 +35,10 @@ public class ServiceAddresses {
 
     public String getCompositeIteration() {
         return compositeIteration;
+    }
+
+    public String getCompositeScene() {
+        return compositeScene;
     }
 
     public String getIteration() {
