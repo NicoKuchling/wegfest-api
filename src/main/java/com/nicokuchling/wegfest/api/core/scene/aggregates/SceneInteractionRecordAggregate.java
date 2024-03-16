@@ -24,6 +24,26 @@ public final class SceneInteractionRecordAggregate {
     private final SurveyResponse surveyResponse;
     private final ServiceAddresses serviceAddresses;
 
+    public SceneInteractionRecordAggregate() {
+        this.sceneInteractionRecordId = -1;
+        this.scene = null;
+        this.unitySceneSetupId = null;
+        this.playerPosition = null;
+        this.daytime = null;
+        this.speedLimit = null;
+        this.eMobilityFrequency = null;
+        this.trafficVolume = null;
+        this.hasCyclists = false;
+        this.hasTrafficLights = false;
+        this.timeNeededForOrientation = -1;
+        this.timeNeededForRoadCrossing = -1;
+        this.numberOfDangerousSituations = -1;
+        this.numberOfAccidents = -1;
+        this.numberOfCrossingAttempts = -1;
+        this.surveyResponse = null;
+        this.serviceAddresses = null;
+    }
+
     public SceneInteractionRecordAggregate(
             int sceneInteractionRecordId,
             SceneAggregate scene,

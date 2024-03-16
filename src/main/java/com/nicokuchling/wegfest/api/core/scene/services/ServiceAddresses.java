@@ -24,4 +24,10 @@ public class ServiceAddresses {
     public String getSurvey() {
         return survey;
     }
+
+    @Override
+    public String toString() {
+        return "Scene service addresses: { sceneServiceAddress: " + scene
+                + ", surveyServiceAddress: " + survey + " }";
+    }
 }

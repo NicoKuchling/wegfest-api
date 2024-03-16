@@ -12,6 +12,7 @@ public class Iteration {
     private boolean isAborted;
     private LocalDate completedAt;
     private final List<Integer> sceneInteractionRecordIds;
+    private String serviceAddress;
 
     public Iteration() {
         this.iterationId = -1;
@@ -20,12 +21,14 @@ public class Iteration {
         this.isAborted = false;
         this.completedAt = null;
         this.sceneInteractionRecordIds = null;
+        this.serviceAddress = null;
     }
 
     public Iteration(
             int iterationId,
             int personId,
-            List<Integer> sceneInteractionRecordIds) {
+            List<Integer> sceneInteractionRecordIds,
+            String serviceAddress) {
 
         this.iterationId = iterationId;
         this.personId = personId;
@@ -33,6 +36,7 @@ public class Iteration {
         this.isAborted = false;
         this.completedAt = LocalDate.MIN;
         this.sceneInteractionRecordIds = new ArrayList<>(sceneInteractionRecordIds);
+        this.serviceAddress = serviceAddress;
     }
 
     public int getIterationId() {
@@ -70,4 +74,6 @@ public class Iteration {
     public List<Integer> getSceneInteractionRecordIds() {
         return Collections.unmodifiableList(sceneInteractionRecordIds);
     }
+
+    public String getServiceAddress() { return serviceAddress; }
 }

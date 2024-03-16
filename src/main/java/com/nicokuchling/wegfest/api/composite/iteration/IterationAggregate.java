@@ -1,5 +1,6 @@
 package com.nicokuchling.wegfest.api.composite.iteration;
 
+import com.nicokuchling.wegfest.api.composite.ServiceAddresses;
 import com.nicokuchling.wegfest.api.core.scene.aggregates.SceneInteractionRecordAggregate;
 import com.nicokuchling.wegfest.api.core.person.Person;
 
@@ -14,6 +15,7 @@ public class IterationAggregate {
     private final boolean isAborted;
     private final LocalDate completedAt;
     private final List<SceneInteractionRecordAggregate> sceneInteractionRecordAggregates;
+    private final ServiceAddresses serviceAddresses;
 
     public IterationAggregate(
             int iterationId,
@@ -21,7 +23,8 @@ public class IterationAggregate {
             boolean isCompleted,
             boolean isAborted,
             LocalDate completedAt,
-            List<SceneInteractionRecordAggregate> sceneInteractionRecordAggregates) {
+            List<SceneInteractionRecordAggregate> sceneInteractionRecordAggregates,
+            ServiceAddresses serviceAddresses) {
 
         this.iterationId = iterationId;
         this.person = person;
@@ -29,6 +32,7 @@ public class IterationAggregate {
         this.isAborted = false;
         this.completedAt = completedAt;
         this.sceneInteractionRecordAggregates = new ArrayList<>(sceneInteractionRecordAggregates);
+        this.serviceAddresses = serviceAddresses;
     }
 
     public int getIterationId() {

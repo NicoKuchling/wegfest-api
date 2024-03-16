@@ -8,5 +8,5 @@ public interface PersonService {
     @GetMapping(
             value = "/person/{personId}",
             produces = "application/json")
-    Person getPerson(@PathVariable int personId);
+    Person getPersonById(@PathVariable int personId);
 }
